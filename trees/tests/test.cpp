@@ -7,16 +7,13 @@ using namespace std;
 
 int main(int nargs, char** vargs){
 	bool ciclo=false;
+	string respuesta;
 	cout<<"$TreeSO"<< endl<<"¡Bienvenido a TreeSO!"<< endl <<"¡Autores: <estudiante1> y <estudiante2>!"<<endl;
 	while (ciclo==false){
 		int estado=0;//estado es actualidad del programa
 		cout<<"/#"<<estado<<endl;
 		cout<<"Que quiere hacer?"<<endl;
-		if (vargs=="cd"}{
-
-		}
-
-
+		cin>>respuesta;// /misdocumentos/carpeta1# cd
 
 
 		trees::Tree treeSO;//aqui se crea arbol inial
@@ -28,7 +25,7 @@ int main(int nargs, char** vargs){
 		if (node != nullptr){
 			node->getChildren()->print();
 		}
-		if 
+		
 	}
 	return 0;
 }
