@@ -1,11 +1,14 @@
 #include <iostream>
 #include "trees/tree.hpp"
 #include <cstring>
+#include <cstring>
+#include <string.h>
+#include <fstream>
 
 using namespace std;
 //aqui va la funcion 
 
-int main(int nargs, char** vargs){
+int main(int nargs, char* vargs){
 	bool ciclo=false;
 	cout<<"$TreeSO"<< endl<<"¡Bienvenido a TreeSO!"<< endl <<"¡Autores: <estudiante1> y <estudiante2>!"<<endl;
 	while (ciclo==false){
