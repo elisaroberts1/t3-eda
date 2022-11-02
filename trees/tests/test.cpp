@@ -14,7 +14,7 @@ int main(int nargs, char** vargs){
 		cout<<"Que quiere hacer?"<<endl;
 		for(int j=0; j<nargs; j++){
 			if(vargs[1]=="#"){
-				
+
 			}
 		}
 		if (vargs=="cd"}{
@@ -33,7 +33,5 @@ int main(int nargs, char** vargs){
 		if (node != nullptr){
 			node->getChildren()->print();
 		}
-		if 
-	}
 	return 0;
 }
