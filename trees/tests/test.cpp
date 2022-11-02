@@ -12,6 +12,11 @@ int main(int nargs, char** vargs){
 		int estado=0;//estado es actualidad del programa
 		cout<<"/#"<<estado<<endl;
 		cout<<"Que quiere hacer?"<<endl;
+		for(int j=0; j<nargs; j++){
+			if(vargs[1]=="#"){
+				
+			}
+		}
 		if (vargs=="cd"}{
 
 		}
