@@ -55,7 +55,7 @@ int main(int nargs, char** vargs){
 				if (respuesta[i]=='c' && respuesta[i+1]=='d' && respuesta[i+4]=='.'){
 					cout<<"me dijo cd .."<<endl;
 				}
-				if (respuesta[i]=='l' && respuesta[i+1]=='s'){
+				if (respuesta[i]=='l' && respuesta[i+1]=='s' && respuesta[i+4]=='.'){
 					cout<<"me dijo ls"<<endl;
 				}
 				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
@@ -110,3 +110,4 @@ int main(int nargs, char** vargs){
 	}
 	return 0;
 }
+
