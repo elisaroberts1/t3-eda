@@ -39,12 +39,11 @@ int main(int nargs, char** vargs){
 	bool ciclo=false;
 	string respuesta;
 	string exit ="exit";
-	trees::Tree treeSO;//aqui se crea arbol incial
+	trees::Tree treeSO;//aqui se crea arbol inicial
 	cout<<" $TreeSO "<< endl<<" Bienvenido a TreeSO "<< endl <<" Autores: <franca> y <elisa> "<<endl;
 	while (ciclo==false){
 		string *estado;//estado es actualidad del programa
-		cout<<"/# "<<estado<<endl;
-		cout<<"Que quiere hacer?"<<endl;
+		cout<<"/# "<<endl;
 		cin>>respuesta;
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
