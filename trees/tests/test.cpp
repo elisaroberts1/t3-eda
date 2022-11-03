@@ -11,11 +11,11 @@ void cd(){
 	;
 }
 
-void ls(){
+void ls(carpeta){
 	;
 }
 
-void mkdir(){
+void mkdir(carpeta){
 	;
 }
 
@@ -40,9 +40,9 @@ int main(int nargs, char* vargs){
 	string respuesta;
 	string exit ="exit";
 	trees::Tree treeSO;//aqui se crea arbol incial
-	cout<<" $TreeSO "<< endl<<" ¡Bienvenido a TreeSO! "<< endl <<" ¡Autores: <franca> y <elisa>! "<<endl;
+	cout<<" $TreeSO "<< endl<<" Bienvenido a TreeSO "<< endl <<" Autores: <franca> y <elisa> "<<endl;
 	while (ciclo==false){
-		int estado=0;//estado es actualidad del programa
+		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<estado<<endl;
 		cout<<"Que quiere hacer?"<<endl;
 		cin>>respuesta;// /misdocumentos/carpeta1# cd
@@ -52,7 +52,7 @@ int main(int nargs, char* vargs){
 				if (respuesta[0] == '/'){
 					treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
 					if (respuesta[i]=='c' && respuesta[i+1]=='d'){
-					cout<<"me dijo cd"<<endl;
+					cout<<"me dijo cd()"<<endl;
 					}
 					if (respuesta[i]=='l' && respuesta[i+1]=='s'){
 					cout<<"me dijo ls"<<endl;
