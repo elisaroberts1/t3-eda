@@ -15,7 +15,7 @@ Tree::Tree(): root(nullptr) {
 }
 
 void rm(TreeNode* node){
-	;
+	//hola, acá va el rm;
 }
 
 void Tree::setRoot(TreeNode* node){
