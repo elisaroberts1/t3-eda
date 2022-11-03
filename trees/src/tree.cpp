@@ -14,6 +14,10 @@ Tree::Tree(): root(nullptr) {
 
 }
 
+void rm(TreeNode* node){
+	;
+}
+
 void Tree::setRoot(TreeNode* node){
 	if (root == nullptr){
 		root = node;
