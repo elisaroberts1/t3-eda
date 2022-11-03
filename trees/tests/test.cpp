@@ -35,7 +35,7 @@ void find(){
 	;
 }
 
-int main(int nargs, char* vargs){
+int main(int nargs, char** vargs){
 	bool ciclo=false;
 	string respuesta;
 	string exit ="exit";
