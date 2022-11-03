@@ -47,29 +47,56 @@ int main(int nargs, char** vargs){
 		cin>>respuesta;
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
-			for (int i=0;i<respuesta.length();i++){
-				if (respuesta[i-1] == '#'){
-					treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
-					if (respuesta[i]=='c' && respuesta[i+1]=='d'){
+			if(respuesta[0] == '/' && respuesta[1] == '#'){
+				treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
+				int i = 2;
+				if (respuesta[i]=='c' && respuesta[i+1]=='d'){
 					cout<<"me dijo cd()"<<endl;
-					}
-					if (respuesta[i]=='l' && respuesta[i+1]=='s'){
+				}
+				if (respuesta[i]=='l' && respuesta[i+1]=='s'){
 					cout<<"me dijo ls"<<endl;
-					}
-					if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
+				}
+				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
 					cout<<"me dijo mkdir"<<endl;
-					}
-					if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
+				}
+				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
 					cout<<"me dijo mkfile"<<endl;
-					}
-					if (respuesta[i]=='r' && respuesta[i+1]=='m'){
+				}
+				if (respuesta[i]=='r' && respuesta[i+1]=='m'){
 					cout<<"me dijo rm"<<endl;
-					}
-					if (respuesta[i]=='t' && respuesta[i+1]=='r'){
+				}
+				if (respuesta[i]=='t' && respuesta[i+1]=='r'){
 					cout<<"me dijo tree"<<endl;
-					}
-					if (respuesta[i]=='f' && respuesta[i+1]=='i'){
+				}
+				if (respuesta[i]=='f' && respuesta[i+1]=='i'){
 					cout<<"me dijo find"<<endl;
+				}
+			}
+			else{
+				for (int i=0;i<respuesta.length();i++){
+					if (respuesta[i-1] == '#'){
+						treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
+						if (respuesta[i]=='c' && respuesta[i+1]=='d'){
+							cout<<"me dijo cd()"<<endl;
+						}
+						if (respuesta[i]=='l' && respuesta[i+1]=='s'){
+							cout<<"me dijo ls"<<endl;
+						}
+						if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
+							cout<<"me dijo mkdir"<<endl;
+						}
+						if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
+							cout<<"me dijo mkfile"<<endl;
+						}
+						if (respuesta[i]=='r' && respuesta[i+1]=='m'){
+							cout<<"me dijo rm"<<endl;
+						}
+						if (respuesta[i]=='t' && respuesta[i+1]=='r'){
+							cout<<"me dijo tree"<<endl;
+						}
+						if (respuesta[i]=='f' && respuesta[i+1]=='i'){
+							cout<<"me dijo find"<<endl;
+						}
 					}
 				}
 			}
