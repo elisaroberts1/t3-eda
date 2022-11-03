@@ -1,0 +1,3 @@
+C:/Users/franca/Desktop/T3/t3-eda-1/trees/build/CMakeFiles/test_tree.dir
+C:/Users/franca/Desktop/T3/t3-eda-1/trees/build/CMakeFiles/edit_cache.dir
+C:/Users/franca/Desktop/T3/t3-eda-1/trees/build/CMakeFiles/rebuild_cache.dir
