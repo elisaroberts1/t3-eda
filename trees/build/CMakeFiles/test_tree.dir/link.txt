@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_tree.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\test_tree.dir/objects.a @CMakeFiles\test_tree.dir\objects1
-C:\msys64\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\test_tree.dir/objects.a -Wl,--no-whole-archive -o test_tree.exe -Wl,--out-implib,libtest_tree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_tree.dir\linkLibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_tree.dir/tests/test.cpp.o CMakeFiles/test_tree.dir/src/treeNode.cpp.o CMakeFiles/test_tree.dir/src/treeListNode.cpp.o CMakeFiles/test_tree.dir/src/treeList.cpp.o CMakeFiles/test_tree.dir/src/tree.cpp.o -o test_tree 
