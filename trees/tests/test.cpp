@@ -45,7 +45,7 @@ int main(int nargs, char** vargs){
 		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<estado<<endl;
 		cout<<"Que quiere hacer?"<<endl;
-		cin>>respuesta;// /misdocumentos/carpeta1# cd
+		cin>>respuesta;
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			for (int i=0;i<respuesta.length();i++){
