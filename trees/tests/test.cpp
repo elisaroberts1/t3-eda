@@ -35,7 +35,7 @@ void find(){
 	;
 }
 
-int main(int nargs, char* vargs){
+int main(int nargs, char** vargs){
 	bool ciclo=false;
 	string respuesta;
 	string exit ="exit";
@@ -49,7 +49,7 @@ int main(int nargs, char* vargs){
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			for (int i=0;i<respuesta.length();i++){
-				if (respuesta[0] == '/'){
+				if (respuesta[i-1] == '#'){
 					treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
 					if (respuesta[i]=='c' && respuesta[i+1]=='d'){
 					cout<<"me dijo cd()"<<endl;
