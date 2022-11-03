@@ -4,6 +4,7 @@
 #include <cstring>
 #include <string.h>
 #include <fstream>
+#include <string>
 
 using namespace std;
 //aqui van las funciones
@@ -44,14 +45,15 @@ int main(int nargs, char** vargs){
 	while (ciclo==false){
 		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<endl;
-		cin>>respuesta;
+		getline(cin, respuesta);
+		//cin>>respuesta;
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			if(respuesta[0] == '/' && respuesta[1] == '#'){
 				treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
 				int i = 2;
-				if (respuesta[i]=='c' && respuesta[i+1]=='d'){
-					cout<<"me dijo cd()"<<endl;
+				if (respuesta[i]=='c' && respuesta[i+1]=='d' && respuesta[i+4]=='.'){
+					cout<<"me dijo cd .."<<endl;
 				}
 				if (respuesta[i]=='l' && respuesta[i+1]=='s'){
 					cout<<"me dijo ls"<<endl;
