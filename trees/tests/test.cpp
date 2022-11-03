@@ -11,11 +11,11 @@ void cd(){
 	;
 }
 
-void ls(carpeta){
+void ls(){
 	;
 }
 
-void mkdir(carpeta){
+void mkdir(){
 	;
 }
 
