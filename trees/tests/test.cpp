@@ -46,7 +46,6 @@ int main(int nargs, char** vargs){
 		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<endl;
 		getline(cin, respuesta);
-		//cin>>respuesta;
 		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			if(respuesta[0] == '/' && respuesta[1] == '#'){
