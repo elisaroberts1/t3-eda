@@ -74,7 +74,7 @@ int main(int nargs, char** vargs){
 			}
 			else{
 				for (int i=0;i<respuesta.length();i++){
-					if (respuesta[i-1] == '#'){
+					if (respuesta[1] != '#' && respuesta[i-1] == '#'){
 						treeSO.setRoot(new trees ::TreeNode (0));//nose si va aca
 						if (respuesta[i]=='c' && respuesta[i+1]=='d'){
 							cout<<"me dijo cd()"<<endl;
