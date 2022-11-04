@@ -114,8 +114,8 @@ int main(int nargs, char** vargs){
 									n2 += respuesta[j];
 									j++;
 								}
-								const char* nom1 = nn1.c_str();
-								treeSO.insert(n2.c_str(), nom1);
+								treeSO.insert(n2, nn1);
+								//treeSO.insert(n2.c_str(), "a");
 							}
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){

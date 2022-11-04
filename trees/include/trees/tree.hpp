@@ -24,9 +24,9 @@ public:
 	void mkdir(TreeNode* node);
 	void setRoot(TreeNode* node);
 	void insert(TreeNode* node, TreeNode* parent);
-	void insert(const char* child, const char* parent);
-	TreeNode* find_rec(const char* val, TreeNode* node);
-	TreeNode* find(const char* val);
+	void insert(std::string child, std::string parent);
+	TreeNode* find_rec(std::string val, TreeNode* node);
+	TreeNode* find(std::string val);
 	void traverse_rec(TreeNode* node, int level);
 	void traverse();
 	virtual ~Tree();
