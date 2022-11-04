@@ -8,6 +8,7 @@
 #include "trees/tree.hpp"
 #include <iostream>
 #include <string.h>
+#include <string>
 
 namespace trees {
 
@@ -35,6 +36,13 @@ Tree::Tree(): root(nullptr) {
 	}
 }*/
 
+void Tree::rm(TreeNode* node){
+	if(node != NULL){
+		delete node->getChildren();
+		delete node;
+	}
+}
+
 void Tree::setRoot(TreeNode* node){
 	if (root == nullptr){
 		root = node;
@@ -47,32 +55,27 @@ void Tree::insert(TreeNode* child, TreeNode* parent){
 }
 
 void Tree::insert(std::string val, std::string val_parent){
-	TreeNode* parent = find(val_parent);
-	if (parent != nullptr){
+	TreeNode* par = find(val_parent);
+	if (par != nullptr){
+		std::cout << "SI FUNCAAAAA" << std::endl;
 		TreeNode* child = new TreeNode(val);
-		insert(child, parent);
-		std::cout << "insertado " << val << " in " << val_parent << " at " << parent << std::endl;
+		insert(child, par);
+		std::cout << "insertado " << val << " in " << val_parent << " at " << par << std::endl;
 	}
 }
 
 TreeNode* Tree::find_rec(std::string val, TreeNode* node){
 	TreeNode* ans = nullptr;
 	if (node != nullptr){
-		std::string nod = node->getData();
-		const char* n = nod.c_str();
-		if(nod.length() == val.length()){
-			for(int i = 0; i < val.length(); i++){
-				if(nod[i] == val[i]){
-					ans = node;
-				}
-				else{ // search in children
-					TreeList* childrenList = node->getChildren();
-					TreeListNode* ptr = childrenList->getHead();
-					while (ptr!=nullptr && ans == nullptr){
-						ans = find_rec(val, ptr->getData());
-						ptr = ptr->getNext();
-					}
-				}
+		if (node->getData() == val){
+			ans = node;
+		}
+		else{ // search in children
+			TreeList* childrenList = node->getChildren();
+			TreeListNode* ptr = childrenList->getHead();
+			while (ptr!=nullptr && ans == nullptr){
+				ans = find_rec(val, ptr->getData());
+				ptr = ptr->getNext();
 			}
 		}
 	}

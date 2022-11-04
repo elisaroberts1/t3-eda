@@ -1,9 +1,6 @@
 #include <iostream>
 #include "trees/tree.hpp"
-#include <cstring>
-#include <cstring>
 #include <string.h>
-#include <fstream>
 #include <string>
 #include <vector>
 
@@ -14,15 +11,6 @@ void cd(){
 }
 
 void ls(){
-	;
-}
-
-
-void mkfile(){
-	;
-}
-
-void rm(){
 	;
 }
 
@@ -39,14 +27,14 @@ int main(int nargs, char** vargs){
 	string respuesta;
 	string exit ="exit";
 	vector<string> camino;
+	vector<string> v_carpetas;
 	trees::Tree treeSO;//aqui se crea arbol inicial
 	cout<<" $TreeSO "<< endl<<" Bienvenido a TreeSO "<< endl <<" Autores: <franca> y <elisa> "<<endl;
 	treeSO.setRoot(new trees::TreeNode("/"));
+	camino.push_back("/");
 	while (ciclo==false){
-		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<endl;
 		getline(cin, respuesta);
-		camino.push_back("/");
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			if(respuesta[0] == '/' && respuesta[1] == '#'){
 				int i = 2;
@@ -64,7 +52,8 @@ int main(int nargs, char** vargs){
 							nom += respuesta[j];
 							j++;
 						}
-						treeSO.insert(nom.c_str(), "/");
+						treeSO.insert(nom, "/");
+						v_carpetas.push_back(nom);
 					}
 				}
 				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
@@ -76,12 +65,12 @@ int main(int nargs, char** vargs){
 							nom += respuesta[j];
 							j++;
 						}
-						treeSO.insert(nom.c_str(), "/");
+						treeSO.insert(nom, "/");
 					}
 				}
 				if (respuesta[i]=='r' && respuesta[i+1]=='m'){
-
 					cout<<"me dijo rm"<<endl;
+					
 				}
 				if (respuesta[i]=='t' && respuesta[i+1]=='r'){
 					cout<<"me dijo tree"<<endl;
@@ -101,6 +90,7 @@ int main(int nargs, char** vargs){
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
 							cout<<"me dijo mkdir"<<endl;
 							if(respuesta[i+5] == ' ' && respuesta[i+6] != '.'){
+								cout << "aqui toyyyy" << endl;
 								int j = i + 6;
 								int k = i - 2;
 								string n1;
@@ -117,8 +107,16 @@ int main(int nargs, char** vargs){
 									n2 += respuesta[j];
 									j++;
 								}
-								const char* nom1 = nn1.c_str();
-								treeSO.insert(n2.c_str(), nom1);
+								for(int j = 0; j<v_carpetas.size(); j++){
+									cout << v_carpetas[j] << endl;
+									cout << nn1 << endl;
+									treeSO.find(v_carpetas[j]);
+									if(v_carpetas[j] == nn1){
+										cout << "ESTOY ADENTRO" << endl;
+										v_carpetas.push_back(n2);
+										treeSO.insert(n2, v_carpetas[j]);
+									}
+								}
 							}
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
