@@ -90,7 +90,6 @@ int main(int nargs, char** vargs){
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
 							cout<<"me dijo mkdir"<<endl;
 							if(respuesta[i+5] == ' ' && respuesta[i+6] != '.'){
-								cout << "aqui toyyyy" << endl;
 								int j = i + 6;
 								int k = i - 2;
 								string n1;
@@ -112,7 +111,6 @@ int main(int nargs, char** vargs){
 									cout << nn1 << endl;
 									treeSO.find(v_carpetas[j]);
 									if(v_carpetas[j] == nn1){
-										cout << "ESTOY ADENTRO" << endl;
 										v_carpetas.push_back(n2);
 										treeSO.insert(n2, v_carpetas[j]);
 									}

@@ -57,7 +57,6 @@ void Tree::insert(TreeNode* child, TreeNode* parent){
 void Tree::insert(std::string val, std::string val_parent){
 	TreeNode* par = find(val_parent);
 	if (par != nullptr){
-		std::cout << "SI FUNCAAAAA" << std::endl;
 		TreeNode* child = new TreeNode(val);
 		insert(child, par);
 		std::cout << "insertado " << val << " in " << val_parent << " at " << par << std::endl;
