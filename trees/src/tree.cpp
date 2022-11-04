@@ -14,8 +14,12 @@ Tree::Tree(): root(nullptr) {
 
 }
 
-void rm(TreeNode* node){
-	//hola, acá va el rm;
+void Tree:: rm(TreeNode* node,int nombre){
+	TreeNode* node = find(nombre);
+	if (node==nombre){
+		remove(nombre);
+	}
+
 }
 
 void Tree::setRoot(TreeNode* node){

@@ -18,6 +18,7 @@ private:
 	TreeNode* root;
 public:
 	Tree();
+	void Tree:: rm(TreeNode* node,int nombre);
 	void setRoot(TreeNode* node);
 	void insert(TreeNode* node, TreeNode* parent);
 	void insert(int child, int parent);
