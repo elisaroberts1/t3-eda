@@ -25,12 +25,12 @@ Tree::Tree(): root(nullptr) {
 
 void Tree::item(std::string nombre, int val){
 	if(val==1){
-		TreeNode* nodo=val;
+		TreeNode* nodo1=val;
     	Tree.insert(nodo);
 	}
     if(val==0){
-
-		tree.insert(new trees::TreeNode(0));
+		TreeNode* nodo2=val;
+		Tree.insert(nodo);
 
 	}
 }

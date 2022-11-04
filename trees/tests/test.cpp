@@ -82,15 +82,10 @@ int main(int nargs, char** vargs){
 				}
 				if (respuesta[i]=='t' && respuesta[i+1]=='r'){
 					cout<<"me dijo tree"<<endl;
-					trees::TreeNode* node = tree.find(10);
-					if (node != nullptr){
-					node->getChildren()->print();
+					treeSO.traverse();
 					}
 				}
-				if (respuesta[i]=='f' && respuesta[i+1]=='i'){
-					cout<<"me dijo find"<<endl;	
-			}
-			}
+
 			else{
 				for (int i=0;i<respuesta.length();i++){
 					if (respuesta[1] != '#' && respuesta[i-1] == '#'){
