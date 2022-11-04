@@ -20,6 +20,7 @@ private:
 public:
 	Tree();
 //	void rm(TreeNode* node,int nombre);
+	void item(std::string nombre, int val);
 	void mkdir(TreeNode* node);
 	void setRoot(TreeNode* node);
 	void insert(TreeNode* node, TreeNode* parent);

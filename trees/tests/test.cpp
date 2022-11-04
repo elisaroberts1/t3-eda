@@ -55,7 +55,6 @@ int main(int nargs, char** vargs){
 					cout<<"me dijo ls"<<endl;
 				}
 				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
-					cout<<"me dijo mkdir"<<endl;
 					if(respuesta[7] == ' ' && respuesta[8] != '.'){
 						int j = 8;
 						string nom;
@@ -83,10 +82,14 @@ int main(int nargs, char** vargs){
 				}
 				if (respuesta[i]=='t' && respuesta[i+1]=='r'){
 					cout<<"me dijo tree"<<endl;
+					trees::TreeNode* node = tree.find(10);
+					if (node != nullptr){
+					node->getChildren()->print();
+					}
 				}
 				if (respuesta[i]=='f' && respuesta[i+1]=='i'){
-					cout<<"me dijo find"<<endl;
-				}
+					cout<<"me dijo find"<<endl;	
+			}
 			}
 			else{
 				for (int i=0;i<respuesta.length();i++){

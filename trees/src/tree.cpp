@@ -23,6 +23,18 @@ Tree::Tree(): root(nullptr) {
 
 }*/
 
+void Tree::item(std::string nombre, int val){
+	if(val==1){
+		TreeNode* nodo=val;
+    	Tree.insert(nodo);
+	}
+    if(val==0){
+
+		tree.insert(new trees::TreeNode(0));
+
+	}
+}
+
 void Tree::mkdir(TreeNode* node){
 
 }
