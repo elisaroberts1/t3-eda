@@ -9,6 +9,7 @@
 #define TREENODE_HPP_
 
 #include "trees/treeList.hpp"
+#include <string>
 
 namespace trees {
 
@@ -17,15 +18,16 @@ class TreeNode {
 private:
 	TreeNode* parent;
 	int data; //data can be of any type
+	std::string dat;
 	TreeList* children;
 public:
 	TreeNode();
-	TreeNode(int val);
+	TreeNode(std::string nom);
 	void setParent(TreeNode* node);
-	void setData(int val);
+	void setData(std::string val);
 	void setChildren(TreeList* list);
 	TreeNode* getParent();
-	int getData();
+	std::string getData();
 	TreeList* getChildren();
 	virtual ~TreeNode();
 };

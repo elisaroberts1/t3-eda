@@ -7,6 +7,7 @@
 
 #include "trees/tree.hpp"
 #include <iostream>
+#include <string.h>
 
 namespace trees {
 
@@ -14,11 +15,15 @@ Tree::Tree(): root(nullptr) {
 
 }
 
-void Tree:: rm(TreeNode* node,int nombre){
+/*void Tree:: rm(TreeNode* node,char nombre){
 	TreeNode* node = find(nombre);
-	if (node==nombre){
+	if (node -> getData() == nombre){
 		remove(nombre);
 	}
+
+}*/
+
+void Tree::mkdir(TreeNode* node){
 
 }
 
@@ -33,7 +38,7 @@ void Tree::insert(TreeNode* child, TreeNode* parent){
 	}
 }
 
-void Tree::insert(int val, int val_parent){
+void Tree::insert(const char* val, const char* val_parent){
 	TreeNode* parent = find(val_parent);
 	if (parent != nullptr){
 		TreeNode* child = new TreeNode(val);
@@ -42,10 +47,12 @@ void Tree::insert(int val, int val_parent){
 	}
 }
 
-TreeNode* Tree::find_rec(int val, TreeNode* node){
+TreeNode* Tree::find_rec(const char* val, TreeNode* node){
 	TreeNode* ans = nullptr;
 	if (node != nullptr){
-		if (node->getData() == val){
+		std::string nod = node->getData();
+		const char* n = nod.c_str();
+		if (strcmp(n, val) == 0){
 			ans = node;
 		}
 		else{ // search in children
@@ -60,7 +67,7 @@ TreeNode* Tree::find_rec(int val, TreeNode* node){
 	return ans;
 }
 
-TreeNode* Tree::find(int val){
+TreeNode* Tree::find(const char* val){
 	TreeNode* ans = find_rec(val, root);
 	return ans;
 }

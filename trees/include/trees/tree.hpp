@@ -9,6 +9,7 @@
 #define TREE_HPP_
 
 #include "trees/treeNode.hpp"
+#include <string>
 
 
 namespace trees {
@@ -18,12 +19,13 @@ private:
 	TreeNode* root;
 public:
 	Tree();
-	void Tree:: rm(TreeNode* node,int nombre);
+//	void rm(TreeNode* node,int nombre);
+	void mkdir(TreeNode* node);
 	void setRoot(TreeNode* node);
 	void insert(TreeNode* node, TreeNode* parent);
-	void insert(int child, int parent);
-	TreeNode* find_rec(int val, TreeNode* node);
-	TreeNode* find(int val);
+	void insert(const char* child, const char* parent);
+	TreeNode* find_rec(const char* val, TreeNode* node);
+	TreeNode* find(const char* val);
 	void traverse_rec(TreeNode* node, int level);
 	void traverse();
 	virtual ~Tree();

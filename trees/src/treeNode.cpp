@@ -12,14 +12,14 @@ namespace trees {
 TreeNode::TreeNode(): parent(nullptr), data(-1), children(new TreeList()) {
 }
 
-TreeNode::TreeNode(int val): parent(nullptr), data(val), children(new TreeList()) {
+TreeNode::TreeNode(std::string val): parent(nullptr), dat(val), children(new TreeList()) {
 }
 
 void TreeNode::setParent(TreeNode* node){
 	parent = node;
 }
-void TreeNode::setData(int val){
-		data = val;
+void TreeNode::setData(std::string val){
+		dat = val;
 }
 void TreeNode::setChildren(TreeList* list){
 	children = list;
@@ -27,8 +27,8 @@ void TreeNode::setChildren(TreeList* list){
 TreeNode* TreeNode::getParent(){
 	return parent;
 }
-int TreeNode::getData(){
-	return data;
+std::string TreeNode::getData(){
+	return dat;
 }
 TreeList* TreeNode::getChildren(){
 	return children;
