@@ -5,6 +5,7 @@
 #include <string.h>
 #include <fstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 //aqui van las funciones
@@ -37,6 +38,7 @@ int main(int nargs, char** vargs){
 	bool ciclo=false;
 	string respuesta;
 	string exit ="exit";
+	vector<string> camino;
 	trees::Tree treeSO;//aqui se crea arbol inicial
 	cout<<" $TreeSO "<< endl<<" Bienvenido a TreeSO "<< endl <<" Autores: <franca> y <elisa> "<<endl;
 	treeSO.setRoot(new trees::TreeNode("/"));
@@ -44,7 +46,7 @@ int main(int nargs, char** vargs){
 		string *estado;//estado es actualidad del programa
 		cout<<"/# "<<endl;
 		getline(cin, respuesta);
-		// treeSO.setRoot(new trees::TreeNode raiz);//crear raiz
+		camino.push_back("/");
 		if (respuesta!=exit){//si no son iguales a exit, sigue con los comandos
 			if(respuesta[0] == '/' && respuesta[1] == '#'){
 				int i = 2;
@@ -78,6 +80,7 @@ int main(int nargs, char** vargs){
 					}
 				}
 				if (respuesta[i]=='r' && respuesta[i+1]=='m'){
+
 					cout<<"me dijo rm"<<endl;
 				}
 				if (respuesta[i]=='t' && respuesta[i+1]=='r'){
@@ -114,8 +117,8 @@ int main(int nargs, char** vargs){
 									n2 += respuesta[j];
 									j++;
 								}
-								treeSO.insert(n2, nn1);
-								//treeSO.insert(n2.c_str(), "a");
+								const char* nom1 = nn1.c_str();
+								treeSO.insert(n2.c_str(), nom1);
 							}
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
