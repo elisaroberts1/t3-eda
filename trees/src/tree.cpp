@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string.h>
 #include <string>
+#include <vector>
 
 namespace trees {
 
@@ -23,18 +24,37 @@ Tree::Tree(): root(nullptr) {
 	}
 
 }*/
-
-/*void Tree::item(std::string nombre, int val){
+std::vector<std::string*> v_item;
+void Tree::item(std::string nombre, int val){
 	if(val==1){
-		TreeNode* nodo1=nombre;
-    	insert(nodo);
+		std::string n1 = nombre + "1";
+		v_item.push_back(&n1);
+		std::cout << n1 << std::endl;
+		std::cout << "Creaste una carpeta" << std::endl;
 	}
     if(val==0){
-		TreeNode* nodo2=val;
-		insert(nodo);
-
+		std::string n0 = nombre + "0";
+		v_item.push_back(&n0);
+		std::cout << n0 << std::endl;
+		std::cout << "Creaste un file" << std::endl;
 	}
-}*/
+}
+
+void Tree::searchItem(std::string nom){
+	std::string n = nom + "1";
+	std::string nn = nom + "0";
+	for(int i=0; i<v_item.size(); i++){
+		if(v_item[i] == &n){
+			std::cout << "ES UNA CARPETA, PUEDES HACER UN INSERT" << std::endl;
+		}
+		else if(v_item[i] == &nn){
+			std::cout << "ES UN FILE, NO PUEDES HACER UN INSERT" << std::endl;
+		}
+		else{
+			std::cout << "ESA CARPETA NO ESTA EN EL PATH, LO LAMENTO" << std::endl;
+		}
+	}
+}
 
 void Tree::rm(TreeNode* node){
 	if(node != NULL){

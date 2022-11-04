@@ -28,6 +28,7 @@ int main(int nargs, char** vargs){
 	string exit ="exit";
 	vector<string> camino;
 	vector<string> v_carpetas;
+	vector<string> v_files;
 	trees::Tree treeSO;//aqui se crea arbol inicial
 	cout<<" $TreeSO "<< endl<<" Bienvenido a TreeSO "<< endl <<" Autores: <franca> y <elisa> "<<endl;
 	treeSO.setRoot(new trees::TreeNode("/"));
@@ -54,6 +55,7 @@ int main(int nargs, char** vargs){
 						}
 						treeSO.insert(nom, "/");
 						v_carpetas.push_back(nom);
+						treeSO.item(nom, 1);
 					}
 				}
 				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
@@ -66,6 +68,8 @@ int main(int nargs, char** vargs){
 							j++;
 						}
 						treeSO.insert(nom, "/");
+						v_files.push_back(nom);
+						treeSO.item(nom, 0);
 					}
 				}
 				if (respuesta[i]=='r' && respuesta[i+1]=='m'){
@@ -106,6 +110,7 @@ int main(int nargs, char** vargs){
 									n2 += respuesta[j];
 									j++;
 								}
+								treeSO.searchItem(nn1);
 								for(int j = 0; j<v_carpetas.size(); j++){
 									cout << v_carpetas[j] << endl;
 									cout << nn1 << endl;
