@@ -1,6 +1,7 @@
 #include <iostream>
 #include "trees/tree.hpp"
 #include <string.h>
+#include <cstring>
 #include <string>
 #include <vector>
 
@@ -96,26 +97,31 @@ int main(int nargs, char** vargs){
 							if(respuesta[i+5] == ' ' && respuesta[i+6] != '.'){
 								int j = i + 6;
 								int k = i - 2;
-								string n1;
-								string nn1;
+								char n1[100];
+								string t;
+								char nn1[100];
 								string n2;
 								while(respuesta[k] != '/'){
-									n1 += respuesta[k];
+									n1[k] = respuesta[k];
+									t += respuesta[k];
 									k--;
 								}
-								for(int i = n1.length(); 0 <= i; i--){
-									nn1 += n1[i];
+								int h = t.size();
+								int g = t.size();
+								for(int i = 0; i<h; i++){
+									nn1[i] = n1[g];
+									g--;
 								}
 								while(j < respuesta.length()){
 									n2 += respuesta[j];
 									j++;
 								}
-								treeSO.searchItem(nn1);
+								nn1[h] = '\0';
+								string n = nn1;
+								reverse(n.begin(), n.end());
 								for(int j = 0; j<v_carpetas.size(); j++){
-									cout << v_carpetas[j] << endl;
-									cout << nn1 << endl;
-									treeSO.find(v_carpetas[j]);
-									if(v_carpetas[j] == nn1){
+									if(v_carpetas[j] == n){
+										treeSO.searchItem(v_carpetas[j]);
 										v_carpetas.push_back(n2);
 										treeSO.insert(n2, v_carpetas[j]);
 									}
@@ -124,6 +130,44 @@ int main(int nargs, char** vargs){
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
 							cout<<"me dijo mkfile"<<endl;
+
+							if(respuesta[i+6] == ' ' && respuesta[i+7] != '.'){
+								int j = i + 7;
+								int k = i - 2;
+								char n1[100];
+								string t;
+								char nn1[100];
+								string n2;
+								while(respuesta[k] != '/'){
+									n1[k] = respuesta[k];
+									t += respuesta[k];
+									k--;
+								}
+								int h = t.size();
+								int g = t.size();
+								for(int i = 0; i<h; i++){
+									nn1[i] = n1[g];
+									g--;
+								}
+								while(j < respuesta.length()){
+									n2 += respuesta[j];
+									j++;
+								}
+								nn1[h] = '\0';
+								string n = nn1;
+								reverse(n.begin(), n.end());
+								for(int j = 0; j<v_carpetas.size(); j++){
+									if(v_carpetas[j] == n){
+										treeSO.searchItem(v_carpetas[j]);
+										v_files.push_back(n2);
+										treeSO.insert(n2, v_carpetas[j]);
+									}
+								}
+							}
+
+
+
+
 						}
 						else if (respuesta[i]=='r' && respuesta[i+1]=='m'){
 							cout<<"me dijo rm"<<endl;
@@ -141,6 +185,7 @@ int main(int nargs, char** vargs){
 		else{//si es igual a exit sale
 			ciclo=true;
 		}
+		treeSO.traverse();
 		
 	}
 	return 0;

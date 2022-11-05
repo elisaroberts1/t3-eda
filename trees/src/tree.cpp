@@ -50,7 +50,7 @@ void Tree::searchItem(std::string nom){
 		else if(v_item[i] == &nn){
 			std::cout << "ES UN FILE, NO PUEDES HACER UN INSERT" << std::endl;
 		}
-		else{
+		else if(v_item[i] != &n && v_item[i] != &nn){
 			std::cout << "ESA CARPETA NO ESTA EN EL PATH, LO LAMENTO" << std::endl;
 		}
 	}
