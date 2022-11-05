@@ -60,7 +60,6 @@ int main(int nargs, char** vargs){
 					}
 				}
 				if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
-					cout<<"me dijo mkfile"<<endl;
 					if(respuesta[8] == ' ' && respuesta[9] != '.'){
 						int j = 9;
 						string nom;
@@ -93,7 +92,6 @@ int main(int nargs, char** vargs){
 							cout<<"me dijo ls"<<endl;
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='d'){
-							cout<<"me dijo mkdir"<<endl;
 							if(respuesta[i+5] == ' ' && respuesta[i+6] != '.'){
 								int j = i + 6;
 								int k = i - 2;
@@ -129,8 +127,6 @@ int main(int nargs, char** vargs){
 							}
 						}
 						else if (respuesta[i]=='m' && respuesta[i+1]=='k' && respuesta[i+2]=='f'){
-							cout<<"me dijo mkfile"<<endl;
-
 							if(respuesta[i+6] == ' ' && respuesta[i+7] != '.'){
 								int j = i + 7;
 								int k = i - 2;
