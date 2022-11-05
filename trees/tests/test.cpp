@@ -6,22 +6,6 @@
 #include <vector>
 
 using namespace std;
-//aqui van las funciones
-void cd(){
-	;
-}
-
-void ls(){
-	;
-}
-
-void tree(){
-	;
-}
-
-void find(){
-	;
-}
 
 int main(int nargs, char** vargs){
 	bool ciclo=false;
