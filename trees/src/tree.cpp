@@ -40,7 +40,7 @@ void Tree::item(std::string nombre, int val){
 	}
 }
 
-void Tree::searchItem(std::string nom){
+/*void Tree::searchItem(std::string nom){
 	std::string n = nom + "1";
 	std::string nn = nom + "0";
 	for(int i=0; i<v_item.size(); i++){
@@ -54,7 +54,7 @@ void Tree::searchItem(std::string nom){
 			std::cout << "ESA CARPETA NO ESTA EN EL PATH, LO LAMENTO" << std::endl;
 		}
 	}
-}
+}*/
 
 void Tree::rm(TreeNode* node){
 	if(node != NULL){

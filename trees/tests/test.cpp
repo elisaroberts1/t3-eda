@@ -119,7 +119,6 @@ int main(int nargs, char** vargs){
 								reverse(n.begin(), n.end());
 								for(int j = 0; j<v_carpetas.size(); j++){
 									if(v_carpetas[j] == n){
-										treeSO.searchItem(v_carpetas[j]);
 										v_carpetas.push_back(n2);
 										treeSO.insert(n2, v_carpetas[j]);
 									}
@@ -154,7 +153,6 @@ int main(int nargs, char** vargs){
 								reverse(n.begin(), n.end());
 								for(int j = 0; j<v_carpetas.size(); j++){
 									if(v_carpetas[j] == n){
-										treeSO.searchItem(v_carpetas[j]);
 										v_files.push_back(n2);
 										treeSO.insert(n2, v_carpetas[j]);
 									}
