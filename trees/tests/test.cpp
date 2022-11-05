@@ -43,6 +43,9 @@ int main(int nargs, char** vargs){
 				if (respuesta[i]=='c' && respuesta[i+1]=='d' && respuesta[i+4]=='.'){
 					cout<<"me dijo cd .."<<endl;
 				}
+				if (respuesta[i]=='f' && respuesta[i+1]=='i'){
+					cout<<"me dijo find"<<endl;
+				}
 				if (respuesta[i]=='l' && respuesta[i+1]=='s'){
 					if(respuesta[i+2] == ' ' && respuesta[i+3] != '.'){
 						int j = 5;
