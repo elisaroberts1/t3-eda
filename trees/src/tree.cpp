@@ -29,14 +29,10 @@ void Tree::item(std::string nombre, int val){
 	if(val==1){
 		std::string n1 = nombre + "1";
 		v_item.push_back(&n1);
-		std::cout << n1 << std::endl;
-		std::cout << "Creaste una carpeta" << std::endl;
 	}
     if(val==0){
 		std::string n0 = nombre + "0";
 		v_item.push_back(&n0);
-		std::cout << n0 << std::endl;
-		std::cout << "Creaste un file" << std::endl;
 	}
 }
 
@@ -79,7 +75,6 @@ void Tree::insert(std::string val, std::string val_parent){
 	if (par != nullptr){
 		TreeNode* child = new TreeNode(val);
 		insert(child, par);
-		std::cout << "insertado " << val << " in " << val_parent << " at " << par << std::endl;
 	}
 }
 
